@@ -4,6 +4,10 @@ steps:
     plugins:
       docker#v3.8.0:
         image: "python:3.13"
+        mount-buildkite-agent: true
+        volumes:
+          - ".:/app"
+        workdir: /app
         command:
           - "sh"
           - "-c"
@@ -16,6 +20,10 @@ steps:
     plugins:
       docker#v3.8.0:
         image: "python:3.13"
+        mount-buildkite-agent: true
+        volumes:
+          - ".:/app"
+        workdir: /app
         command:
           - "sh"
           - "-c"
